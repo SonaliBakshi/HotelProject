@@ -1,0 +1,25 @@
+.container {
+    position: relative;
+    font-family: Arial;
+  }
+  
+  .text-block {
+    position: absolute;
+    bottom: 2px;
+    right: 20px;
+    top: 24px;
+  
+    color:black;
+    padding-left: 10px;
+    padding-right: 240px;
+  }
+  .text-block2 {
+    position: absolute;
+    bottom: 400px;
+    right: 20px;
+    top: 10px;
+   
+    color:rgb(241, 134, 134);
+    padding-left: 20px;
+    padding-right: 110px;
+  }

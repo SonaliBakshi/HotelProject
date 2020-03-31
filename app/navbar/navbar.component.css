@@ -1,0 +1,13 @@
+.navbar {
+    font-size: 10px;
+    color: coral;
+    }
+    #a {
+        text-align: right;
+    
+    }
+
+.spacer
+{
+    flex: 1 1 auto;
+}

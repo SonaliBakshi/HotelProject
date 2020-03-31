@@ -1,0 +1,47 @@
+
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<!-- Displaying Message in the HTML -->
+<div class="abc">
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <form style="height: 200px; width: 250px; color: black; background: burlywood;">
+                <fieldset>
+                    <p style="padding-left: 40px;font-size: 20px;">Login Here</p>
+                                <div class="form-group">
+                                    <label for="Name"><span class="req">* </span> First Name: </label>
+                                    <input required type="text" [(ngModel)]="user.firstName" [ngModelOptions]="{standalone: true}"
+                                        class="form-control phone" maxlength="28" placeholder="Enter your First Name" />
+                                </div>
+                                <div class="form-group">
+                                    <label for="Email"><span class="req">* </span> Email: </label>
+                                    <input required type="email" [(ngModel)]="user.email" [ngModelOptions]="{standalone: true}"
+                                        class="form-control phone" maxlength="28" placeholder="Enter your Email" />
+                                </div>
+                                <div class="form-group">
+                                    <label for="Password"><span class="req">* </span> Password: </label>
+                                    <input required type="password" [(ngModel)]="user.password" [ngModelOptions]="{standalone: true}"
+                                        class="form-control phone" maxlength="28" placeholder="Enter your Password" />
+                                </div>
+            
+                                <div class="form-group">
+                                    <input class="btn btn-success" type="submit" name="submit_reg" value="Login" 
+                                    (click)="registerProcess()">
+                                </div>
+                            </fieldset>
+                            <div style="text-align: center">
+                                <h1>{{message}}</h1>
+                            </div>
+                        </form><!-- ends register form -->
+                        <!-- second for to fiter user-->
+                    </div><!-- ends col-6 -->
+            
+                </div>
+            </div>
+            
+        </div>

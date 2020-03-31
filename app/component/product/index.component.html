@@ -1,0 +1,32 @@
+
+<div style="padding-left: 100px;background-color: darkblue;" >
+    
+    <h1 style="color: deeppink; font-family: serif;font-style: italic; padding-left: 90px;">
+        <b>Choose your favourite room,drinks & services</b><a [routerLink]="['/cart']" style="padding-left: 70px;">
+        <button style="background-color: rgb(113, 230, 113); color:darkblue;">Bill</button></a></h1>
+    
+
+    <table border="1" style="padding-left: 200px; background-color: black; color: deeppink; font-size: 26px;font-family: serif;font-style: italic;;">
+    <tr>
+        <td align="center">SNO.</td>
+        <td align="center">Image</td>
+        <td align="center">Item Name</td>
+        <td align="center">Price($)</td> 
+        <td align="center">Order</td>
+    </tr>
+    <tr *ngFor="let product of products">
+        <td align="center">{{product.id}}</td>
+        <td><img src="../assets/Images/{{product.photo}} " style="width: 340px;height: 200px;"></td>
+        <td align="center">{{product.name}}</td>
+        <td align="center">{{product.price}}</td>
+        
+        <td>
+            <a [routerLink]="['/cart', { id:product.id }]">Order</a>
+        </td>
+        
+    </tr>
+    
+</table>
+<br>
+</div>
+<br>

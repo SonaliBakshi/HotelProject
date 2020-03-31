@@ -1,0 +1,39 @@
+<div style="padding-left: 100px;background-color: darkblue;" >
+   
+    <h1 style="color: deeppink; font-family: serif;font-style: italic; padding-left: 290px;">
+        <b>Your Orders!! </b>  
+        <a [routerLink]="['/products']" style="color: deeppink;padding-left: 260px;">
+           <button style="background-color: rgb(113, 230, 113); color:darkblue;"> Products</button></a></h1>
+
+<table border="1" style="padding-right: 100px; background-color: black; color: deeppink; font-size: 26px;font-family: serif;font-style: italic;;">
+    <tr>
+        
+       <!--<th>Id</th>--> 
+       <th >Image</th>
+        <th align="center">Name</th>
+        <th align="center">Amount</th>
+        <th align="center">Quantity</th>
+        <th align="center">Sub Total</th>
+        <th align="center">Remove</th>
+    </tr>
+    <tr *ngFor="let item of items">
+      
+     <!--   <td>{{item.product.id}}</td>-->
+     <td><img src="../assets/Images/{{item.product.photo}} " style="width: 340px;height: 200px;"></td>
+        <td align="center">{{item.product.name}}</td>
+        <td align="center">{{item.product.price}}</td>
+        <td align="center">{{item.quantity}}</td>
+        <td align="center">{{item.product.price * item.quantity}}</td>
+        <td align="center">
+            <a (click)="remove(item.product.id)"><button>Remove</button></a>
+        </td>
+    </tr>
+</table>
+    <br>
+  
+        <p style="font-size: 30px;color: deeppink;font-family: serif;"><i>Your total Bill is - $</i>
+       <b>{{total}}</b></p> 
+        <div class='pm-button'><a href='https://www.payumoney.com/paybypayumoney/#/8F1169895A294797F98D1AB472342BAD'><img src='https://www.payumoney.com/media/images/payby_payumoney/new_buttons/21.png' /></a></div> 
+ 
+</div>
+<br>

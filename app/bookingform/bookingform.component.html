@@ -1,0 +1,62 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<!-- Displaying Message in the HTML -->
+<div class="aqw"  >
+
+
+
+<div class="container" style="height: 400px; width: 670px;">
+    <div class="row">
+        <div class="col-md-6" >
+            <form name="booking" novalidate>
+                <fieldset>
+                   
+                    <div class="form-group">
+                        <label for="Name"><span class="req">* </span> First Name: </label>
+                        <input type="text" [(ngModel)]="user.firstName" ng-required="true"
+                        [ngModelOptions]="{standalone: true}"
+                            class="form-control phone" maxlength="28" placeholder="Enter your Fist Name" />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="firstname"><span class="req">* </span> Last Name: </label>
+                        <input class="form-control" type="text" [(ngModel)]="user.lastName" [ngModelOptions]="{standalone: true}" required
+                            placeholder="Enter valid Last Name" />
+                        <div id="errFirst"></div>
+                    </div>
+                    <div class="form-group">
+                        <label for="mobile"><span class="req">* </span> Phone Number: </label>
+                        <input required type="text" [(ngModel)]="user.phone" [ngModelOptions]="{standalone: true}"
+                            class="form-control phone" maxlength="28" placeholder="Enter your Phone Number" />
+                    </div>
+                    <div class="form-group">
+                        <label for="email"><span class="req">* </span>  Email : </label>
+                        <input class="form-control" type="text" [(ngModel)]="user.email" [ngModelOptions]="{standalone: true}"
+                            placeholder="Enter your email" required />
+                        <div id="errLast"></div>
+                    </div>
+                    <div class="form-group">
+                        <label for="lastname"><span class="req">* </span>  Rooms : </label>
+                        <input class="form-control" type="text" [(ngModel)]="user.rooms" [ngModelOptions]="{standalone: true}"
+                            placeholder="Number of Rooms" required />
+                        <div id="errLast"></div>
+                    </div>
+                    
+
+                    <div class="form-group">
+                        <input class="btn btn-success" type="submit" name="submit_reg" value="Register" (click)="registerProcess()">
+                    </div>
+                </fieldset>
+            </form><!-- ends register form -->
+            <!-- second for to fiter user-->
+        </div><!-- ends col-6 -->
+        <div style="padding-left: 490px;">
+            <br><br><br><br><br>
+            <h1 style="color: deeppink;"><span style="background-color: black;font-size: 28px;">{{message}}</span></h1>
+        </div>
+    </div>
+
+</div>

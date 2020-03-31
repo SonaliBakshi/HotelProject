@@ -1,0 +1,86 @@
+<p style="padding-left: 45%;font-size: 18px;color: deeppink;font-family: monospace;"><b>Reviews</b></p>
+<p style="padding-right:380px;font-size: 30px;">
+  <marquee direction="right" behaviour="alternate">
+    <marquee direction="left" behaviour="alternate">
+  What Customer Says
+  </marquee>
+  </marquee>
+</p>
+
+  <p style="padding-left: 36%;color:deeppink;font-size: 15px;font-family: monospace;"> <b>Reviews: </b>
+      <mat-form-field>
+        
+        <textarea matInput style="color: deeppink;"
+         placeholder="Hey! What are your views about it??" [(ngModel)]="enteredContent"></textarea>
+      </mat-form-field>
+ </p>
+      <br>
+  <div class="container">  
+    <div id="myCarouse2" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#myCarouse2" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarouse2" data-slide-to="1"></li>
+        <li data-target="#myCarouse2" data-slide-to="2"></li>
+        <li data-target="#myCarouse2" data-slide-to="3"></li>
+        <li data-target="#myCarouse2" data-slide-to="4"></li>
+      </ol>
+
+      <!-- Wrapper for slides -->
+      <div class="carousel-inner">
+
+        <div class="item active">
+         <p style="padding-left: 35%;padding-right: 35%;font-size: 12px;font-family:serif ;">
+          <i>  We visit this hotel at least once a year to spend a weekend and chill.
+             Its always been a great experience and this time was no different.
+              The rooms are good. Reception services, room service, in room dining, 
+              house keeping are all excellent. Very well trained and responsive staff.</i></p>
+        </div>
+       
+
+        <div class="item">
+            <p style="padding-left: 35%;padding-right: 35%;font-size: 12px;font-family:serif;">
+              <i>  The housekeeping staff in Leela is very efficient and they will maintain your room 
+                very well and fulfill all your needs. Staff is usually very courteous and receptive.
+                 Rooms are clean and well maintained. Food is nice, and the pool too. Steam and Sauna
+                  service is also awesome.</i>
+                </p>
+        </div>
+
+        <div class="item">
+            <p style="padding-left: 35%;padding-right: 35%;font-size: 12px;font-family:serif ;">
+             <i>   Picked from Qatar Airways offering. Exceeded expectations. Truely five stars. 
+                 10 minutes from airport. Hotel limousine whisked 
+                us to the lap of luxury. Hospitality excellent. All round efficiency. Restaurants 
+                pool yoga gym spa most enjoyable, especially mango fiesta this May.</i>
+
+                </p>
+        </div>
+        <div class="item">
+            <p style="padding-left: 35%;padding-right: 35%;font-size: 12px;font-family:serif ;">
+           <i> I have been there for my business meeting and earlier for my orientation during the 
+            placement. I must say that the service, the stay facility, the food and the overall 
+            maintenance of the hotel is really awesome.I had a great experience there.</i></p>
+        </div>
+        <div class="item">
+          <p style="padding-left: 35%;padding-right: 35%;font-size: 12px;font-family:serif ;">
+         <i>
+           {{enteredContent}}
+         </i></p>
+      </div>
+
+      </div>
+
+      <!-- Left and right controls -->
+      <a class="left carousel-control" href="#myCarouse2" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#myCarouse2" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </div>
+  <br><br><br>
+  
